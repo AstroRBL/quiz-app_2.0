@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css" class="css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App 2.0</title>
+</head>
+
+<body>
+    <div class="welcome">
+        <select id="categorySelect">
+            <option value="9">General Knowledge</option>
+            <option value="10">Books</option>
+            <option value="11">Films</option>
+            <option value="12">Music</option>
+            <option value="13" >Musical Theaters</option>
+            <option value="14" >Television</option>
+            <option value="15" >Video Games</option>
+            <option value="16" >Board Games</option>
+            <option value="17" >Science and Nature</option>
+            <option value="18" >Computers</option>
+            <option value="19" >Mathematics</option>
+        </select>
+        <select id="difficultySelect">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </div>
+    <div class="overlay">
+    </div>
+    <div class="container">
+        
+        <h1 id="question">Welcome choose to play</h1>
+        <p id="timerIndicater">You took: <label id="yTook"></label></p>
+        <label id="qNumber"><label id="value">0</label>/15</label>
+        <div id="btn">
+        </div>
+        <button id="startBtn">Start</button>
+        <button id="nextBtn">Next</button>
+        <button id="endBtn">End</button>
+        <label id="resultMsg"><label id="endResult"></label></label>
+    </div>
+    <div id="timer"></div>
+    <div class="restart">
+        <label>Quiz Concluded</label>
+        <p>Do you wish to restart?</p>
+        <button id="reQuiz">Restart</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
