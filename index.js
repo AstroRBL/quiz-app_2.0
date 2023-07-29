@@ -51,8 +51,8 @@ function decode(str) {
   txt.innerHTML = str;
   return txt.value;
 }
-let selectedCategory = ""; // Variable to store the selected category
-let selectedDifficulty = ""; // Variable to store the selected difficulty
+let selectedCategory = ""; 
+let selectedDifficulty = ""; 
 
 const categorySelect = document.getElementById("categorySelect");
 categorySelect.addEventListener("change", function () {
@@ -62,16 +62,16 @@ categorySelect.addEventListener("change", function () {
 
 const difficultySelect = document.getElementById("difficultySelect");
 difficultySelect.addEventListener("change", function () {
-  selectedDifficulty = difficultySelect.value; // Update the selected difficulty
-  startQuiz(); // Call the startQuiz() function after updating the difficulty
+  selectedDifficulty = difficultySelect.value; 
+  startQuiz(); 
 });
 
 function fetchQuizData() {
   return fetch(apiUrl + `&difficulty=${selectedDifficulty}`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.results); // Log the data to the console
-      return data.results; // Return the results to the next .then() in the chain
+      console.log(data.results); 
+      return data.results; 
     })
     .catch((error) => {
       console.error("Error fetching quiz data:", error);
